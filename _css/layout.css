@@ -64,6 +64,10 @@ que será 16px
 
 /* ================ HEADER =================== */
 
+.btn-menu-mobile {
+    display: none;
+}
+
 header {
     text-align: center;
     display: flex;
@@ -138,9 +142,53 @@ button:hover {
     padding: 10px 50px;
 }
 
+.btn-cardapio {
+    border: 3px solid var(--yellow);
+    border-radius: 46px;
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0, 0.87));
+    padding: 8px;
+    margin-top: 40px;
+    width: 160px;
+    max-width: 160px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.3s;
+}
 
+.btn-cardapio:hover {
+    color: var(--wine);
+    background: var(--yellow);
+    transition: scale(1.05);
+}
 
+h2, h4 {
+    font-family: "Rum Raisin", sans-serif;
+    font-weight: normal;
+    color: var(--wine);
+}
 
+h2 {
+    color: var(--yellow);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+
+.dishes-day .col-1 h3:first-child {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.dishes-day .col-1 #box-dish-main .first-dish h4 {
+    color: var(--yellow);
+}
+
+.dishes-day h4 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--wine);
+}
 
 /* ============= TITLES ================ */
 
@@ -150,10 +198,6 @@ button:hover {
     font-size: 5rem;
     color: var(--yellow);
 }
-
-
-
-
 
 /* =============== BANNER ============== */
 
@@ -243,4 +287,138 @@ nth-child = permite especificar qual elemento filho deseja ser selecionado
 
 .box-arrow-down i:hover, .controls-slide i:hover, .btn-cardapio:hover, .active {
     opacity: 1;
+}
+
+/* =================== SECTION CARDAPIO =================== */
+
+.cardapio {
+    background: #e5e5e5 url(../_assets/_images/bg_icons.svg);
+    background-size: cover;
+    /* Define se uma imagem de fundo irá rolar junto com o conteudo ou se ela se manterá fixa onde foi colocada */
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-position: center;
+}
+
+.box-cardapio {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    padding: 4rem 0;
+}
+
+.days-week {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: var(--wine) url(../_assets/_images/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.box-btn-cardapio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-btn-cardapio a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--yellow);
+}
+
+.box-btn-cardapio a:first-child {
+    margin-top: 5px;
+}
+
+.dishes-day {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    padding: 140px 60px 50px 20px;
+    background: rgba(229, 229, 229, 0.7);
+}
+
+.dishes-day .col-1 {
+    display: flex;
+    flex-direction: column;
+}
+
+#box-dish-main div.first-dish {
+    background: var(--wine);
+    padding: 10px 15px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.contents-box-dish {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contents-box-dish p {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 6px;
+}
+
+.contents-box-dish p small {
+    margin-left: 2px;
+    font-size: 0.8rem;
+}
+
+.dish {
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+
+.dish p {
+    color: #000;
+}
+
+/* =================== SECTION GALLERY =================== */
+
+
+div.box-gallery {
+    display: flex;
+    justify-content: center;
+    background: #e5e5e5 url(../_assets/_images/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 100px;
+    margin-top: 20px;
+}
+
+div.container-pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-pictures {
+    display: grid;
+    /* reapet() = define quantas colunas irão existir no grid e tamanho que estas colunas irão ocupar */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px;
+    margin-top: 20px;
+}
+
+div.box-gallery img {
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    filter: grayscale(40%);
+}
+
+div.box-gallery img:hover {
+    transform: scale(1.1);
+    filter: saturate(150%);
 }
