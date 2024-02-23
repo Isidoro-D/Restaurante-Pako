@@ -42,6 +42,7 @@ que será 16px
 
 .img-fluid {
     width: max(14vw, 100px);
+    /* Permite redimensionar uma imagem dentro do elemento onde ela foi inserida, tem um funcionamento parecido com a propriedade "background-size", a diferença é que o "background-size" é utilizado quando é desejado inserir uma imagem ao fundo do elemento e o "object-fit" não  */
     object-fit: cover;
 }
 
@@ -145,7 +146,7 @@ button:hover {
 .btn-cardapio {
     border: 3px solid var(--yellow);
     border-radius: 46px;
-    filter: drop-shadow(1px 1px 5px rgba(0,0,0, 0.87));
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.87));
     padding: 8px;
     margin-top: 40px;
     width: 160px;
@@ -160,6 +161,17 @@ button:hover {
     color: var(--wine);
     background: var(--yellow);
     transition: scale(1.05);
+}
+
+
+
+/* ============= TITLES ================ */
+
+.titulo-banner h1 {
+    font-family: "Rum Raisin", sans-serif;
+    font-weight: normal;
+    font-size: 5rem;
+    color: var(--yellow);
 }
 
 h2, h4 {
@@ -190,13 +202,27 @@ h2 {
     color: var(--wine);
 }
 
-/* ============= TITLES ================ */
+#gallery h2 {
+    color: var(--wine);
+    margin-bottom: 10px;
+}
 
-.titulo-banner h1 {
-    font-family: "Rum Raisin", sans-serif;
-    font-weight: normal;
-    font-size: 5rem;
-    color: var(--yellow);
+.employee-perfil h4 {
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.employee-perfil p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #363636;
+}
+
+#box-whats-delivery h4 {
+    font-size: 4.2rem;
 }
 
 /* =============== BANNER ============== */
@@ -249,6 +275,7 @@ h2 {
     color: #fff;
     font-family: "Rum Raisin", sans-serif;
 }
+
 /* "first-child" =  seleciona o primeiro filho dentro do elemento pai
 nth-child = permite especificar qual elemento filho deseja ser selecionado
  */
@@ -300,6 +327,7 @@ nth-child = permite especificar qual elemento filho deseja ser selecionado
     display: flex;
     align-items: center;
     background-position: center;
+    /* fazer um margin para diminuir o espaço branco e editar para nao cortar o espaço vermelho*/
 }
 
 .box-cardapio {
@@ -386,23 +414,22 @@ nth-child = permite especificar qual elemento filho deseja ser selecionado
 /* =================== SECTION GALLERY =================== */
 
 
-div.box-gallery {
+div.box-gallery, #box-party {
     display: flex;
     justify-content: center;
     background: #e5e5e5 url(../_assets/_images/bg_icons.svg);
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 100px;
-    margin-top: 20px;
 }
 
-div.container-pictures {
+div.container-pictures, .container-party {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.box-pictures {
+.box-pictures, .box-party-pictures {
     display: grid;
     /* reapet() = define quantas colunas irão existir no grid e tamanho que estas colunas irão ocupar */
     grid-template-columns: repeat(4, 1fr);
@@ -410,7 +437,7 @@ div.container-pictures {
     margin-top: 20px;
 }
 
-div.box-gallery img {
+div.box-gallery img, #box-party img {
     height: auto;
     border-radius: 5px;
     cursor: pointer;
@@ -418,7 +445,109 @@ div.box-gallery img {
     filter: grayscale(40%);
 }
 
-div.box-gallery img:hover {
+div.box-gallery img:hover, #box-party img:hover {
     transform: scale(1.1);
     filter: saturate(150%);
+}
+
+/* =================== FOOTER =================== */
+
+footer {
+    background: #353535 url(../_assets/_images/bg_icons.svg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 4rem;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-info-contact {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: max(20vw, 480px);
+    padding: 15px;
+    margin-top: 25px;
+}
+
+.box-info-contact p {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+#phone.box-info-contact p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.box-info-contact i {
+    font-size: 2.2rem;
+    color: var(--wine);
+}
+
+#box-whats-delivery {
+    background: #fff;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#box-whats-delivery p {
+    color: var(--wine);
+    font-size: 1.1rem;
+}
+
+#box-whats-delivery img {
+    width: max(7vw, 110px);
+    position: absolute;
+    left: min(42vw, 550px);
+    transition: all 0.3s;
+    margin-left: 4px;
+}
+
+#box-whats-delivery img:hover {
+    /* !important = define a prioridade máxima para uma propriedade, quando aplicado garante que nenhuma outra regra se sobreponha a regra onde foi utilizado */
+    left: min(45vw, 600px) !important;
+}
+
+#whats {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+#whats:hover {
+    transform: scale(1.07);
+}
+
+#whats i {
+    font-size: 3.6rem;
+    color: #34af23;
+    margin-left: 7px;
+}
+
+.social-medias {
+    text-align: right;
+    font-size: 3rem;
+    margin-top: 15px;
+}
+
+.social-medias i {
+    color: #fff;
+    margin-left: 15px;
+}
+
+.social-medias i:hover {
+    text-shadow: 1px 1px 8px #000;
+}
+
+#direitos {
+    margin-top: 1rem;
+    color: #fff;
+    font: .9rem;
 }
