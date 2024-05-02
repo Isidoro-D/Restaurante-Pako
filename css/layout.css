@@ -22,7 +22,7 @@ html {
 body {
     font-family: "Montserrat", sans-serif;
 
-    background: var(--wine) url(../_assets/_images/bg_icons.svg);
+    background: var(--wine) url(../assets/images/bg_icons.svg);
     /* Configura a imagem de fundo fazendo com que ela se movimente junto com a página ou fique fixe */
     background-attachment: fixed;
     /* Encaixa a imagem onde ela foi colocada sem repetir e centralizada. */
@@ -315,7 +315,7 @@ nth-child = permite especificar qual elemento filho deseja ser selecionado
 /* =================== SECTION CARDAPIO =================== */
 
 .cardapio {
-    background: #e5e5e5 url(../_assets/_images/bg_icons.svg);
+    background: #e5e5e5 url(../assets/images/bg_icons.svg);
     background-size: cover;
     /* Define se uma imagem de fundo irá rolar junto com o conteudo ou se ela se manterá fixa onde foi colocada */
     background-attachment: fixed;
@@ -338,7 +338,7 @@ nth-child = permite especificar qual elemento filho deseja ser selecionado
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
-    background: var(--wine) url(../_assets/_images/bg_icons.svg);
+    background: var(--wine) url(../assets/images/bg_icons.svg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -413,7 +413,7 @@ nth-child = permite especificar qual elemento filho deseja ser selecionado
 div.box-gallery, #box-party {
     display: flex;
     justify-content: center;
-    background: #e5e5e5 url(../_assets/_images/bg_icons.svg);
+    background: #e5e5e5 url(../assets/images/bg_icons.svg);
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 100px;
@@ -449,7 +449,7 @@ div.box-gallery img:hover, #box-party img:hover {
 /* =================== FOOTER =================== */
 
 footer {
-    background: #353535 url(../_assets/_images/bg_icons.svg);
+    background: #353535 url(../assets/images/bg_icons.svg);
     background-size: cover;
     background-attachment: fixed;
     padding-bottom: 4rem;
